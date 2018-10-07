@@ -1,0 +1,10 @@
+<!-- 
+  `ngStyle` and `ngClass` are attribute directives. Attribute directives only manipulate the DOM by 
+  altering an already existing element, instead of adding or removing an element like a structural directive.
+
+  Here the background color is being set to the return value of `getColor()`, and the class of `online`
+  is being added only if `serverStatus` is equal to 'online'.
+ -->
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
