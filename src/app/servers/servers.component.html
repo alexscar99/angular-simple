@@ -9,6 +9,7 @@
   Disable button until `allowNewServer` is changed to true. This happens when 
   button is clicked and `onCreateServer` is called.
  -->
+<br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
   Add Server
 </button>
@@ -21,10 +22,12 @@
   Important to note that it doesn't always exist in the DOM. It's either added or removed.
   The below paragraph only enters the DOM once the button is clicked and `serverCreated` turns true.
 -->
-<p *ngIf="serverCreated; else noServer">Server was created, server name is {{ serverName }}</p>
+<br>
+<p *ngIf="serverCreated"><br>Server was created, server name is {{ serverName }}</p>
 
 <!-- 
   `ngFor` is a structural directive. Define a temporary variable using let, then iterate over
   the property `servers` defined to an array in the TS file.
  -->
+<br>
 <app-server *ngFor="let server of servers"></app-server>
